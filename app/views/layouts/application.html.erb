@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>CPI | Internal App</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Capital Processing</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/clients">Clients</a></li>
+          <li><a href="/contracts">Contracts</a></li>
+          <li><a href="/buyers">Buyers</a></li>
+          <li><a href="/payments">Payments</a></li>
+          <li><a href="/notes">Notes</a></li>
+          <li><a href="/reports">Reports</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+  <div id="wrap">
+		<div class="container">
+			<%= yield %>
+		</div>
+	</div>
+
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted credit">Built by <a href="http://capital-processing.com">Capital Processing Int'l Inc.</a></p>
+    </div>
+  </div>
+
+</body>
+</html>

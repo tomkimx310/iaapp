@@ -1,0 +1,44 @@
+<h3>Enter a new Client</h3>
+<br>
+<%= simple_form_for(@client, html: {class: 'form-horizontal' }) do |f| %>
+	
+	<%= f.input :name %>
+	<br>
+	<%= f.input :owner_name %>
+	<br>
+	<%= f.input :address1 %>
+	<br>
+	<%= f.input :address2 %>
+	<br>
+	<%= f.input :city %>
+	<br>
+	<%= f.input :state %>
+	<br>
+	<%= f.input :zip %>
+	<br>
+	<%= f.input :country %>
+	<br>
+	<%= f.input :email %>
+	<br>
+	<%= f.input :phone1 %>
+	<br>
+	<%= f.input :phone2 %>
+	<br>
+	<%= f.input :fax %>
+	<br>
+	<%= f.input :business_type %>
+	<br>
+	<%= f.input :eft_fee %>
+	<%= f.input :cc_fee %>
+	<%= f.input :coupon_fee %>
+	<%= f.input :statement_fee %>
+	<br>
+	<%= f.input :username %>
+	<br>
+	<%= f.input :password %>
+	<%= f.input :password_confirmation %>
+	<br>
+	<%= f.submit "Create", class: 'btn btn-primary' %>
+	<%= link_to "Cancel", root_path, class: 'btn btn-primary' %>
+<% end %>
+<br>

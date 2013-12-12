@@ -1,1 +1,8 @@
-<h2>Contracts</h2>
+<h2>Contract Browser</h2>
+
+<%= simple_form_for contracts_path, :method => :get do |f| %>
+  <%= f.input :search, :required => false, :placeholder => '"ex. Brown"' %>
+  <%= f.button :submit, "Search" %>
+<% end %>
+<br>
+<%= link_to "Add New", new_contract_path, class: 'btn btn-primary' %>

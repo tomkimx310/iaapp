@@ -39,6 +39,12 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# Use simple_form for nicer form layouts
+gem 'simple_form'
+
+# User country select gem for international drop down
+gem 'country_select'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

@@ -1,1 +1,8 @@
-<h2>Buyers</h2>
+<h2>Buyer Browser</h2>
+
+<%= simple_form_for buyers_path, :method => :get do |f| %>
+  <%= f.input :search, :required => false, :placeholder => '"ex. Johnson"' %>
+  <%= f.button :submit, "Search" %>
+<% end %>
+<br>
+<%= link_to "Add New", new_buyer_path, class: 'btn btn-primary' %>

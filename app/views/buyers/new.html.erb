@@ -1,0 +1,38 @@
+<h3>Enter a new Buyer</h3>
+<br>
+<%= simple_form_for(@buyer, html: {class: 'form-horizontal' }) do |f| %>
+	
+	<%= f.input :first_name %>
+	<br>
+	<%= f.input :middle_initial, length: 5 %>
+	<br>
+	<%= f.input :last_name %>
+	<br>
+	<%= f.input :address1 %>
+	<br>
+	<%= f.input :address2 %>
+	<br>
+	<%= f.input :city %>
+	<br>
+	<%= f.input :state %>
+	<br>
+	<%= f.input :zip, as: :string %>
+	<br>
+	<%= f.input :country, priority: [ "United States" ] %>
+	<br>
+	<%= f.input :email %>
+	<br>
+	<%= f.input :phone1, as: :string %>
+	<br>
+	<%= f.input :phone2, as: :string %>
+	<br>
+	<%= f.input :fax %>
+	<br>
+	<%= f.input :ssn %>
+	<br>
+	<%= f.input :payment_type, collection: ["EFT", "Credit Card", "Coupon Book", "Statement", "PIF"] %>
+	<br>
+	<%= f.submit "Create", class: 'btn btn-primary' %>
+	<%= link_to "Cancel", root_path, class: 'btn btn-primary' %>
+<% end %>
+<br>

@@ -6,3 +6,26 @@
 <% end %>
 <br>
 <%= link_to "Add New", new_buyer_path, class: 'btn btn-primary' %>
+<br>
+<br>
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>State</th>
+    <th></th>
+    <th></th>
+  </tr>
+ 
+	<% @buyers.each do |buyer| %>
+	  <tr>
+	    <td><%= buyer.first_name %></td>
+	    <td><%= buyer.last_name %></td>
+	    <td><%= buyer.state %></td>
+	    <td><%= link_to "Show", buyer %></td>
+	    <td><%= link_to "Edit", edit_buyer_path(buyer) %></td>
+	    <td><%= link_to "Cancel", buyer, method: :delete, data: { confirm: "Are you sure?" } %></td>
+	  </tr>
+	<% end %>
+</table>

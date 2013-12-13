@@ -1,8 +1,10 @@
 <h2>Client Browser</h2>
 
 <%= simple_form_for clients_path, :method => :get do |f| %>
-  <%= f.input :search, :required => false, :placeholder => '"ex. CPI Martial Arts"' %>
+  <%= f.input :search, label: false, required: false, placeholder: 'ex. CPI Martial Arts' %>
   <%= f.button :submit, "Search" %>
 <% end %>
+<br>
+<br>
 <br>
 <%= link_to "Add New", new_client_path, class: 'btn btn-primary' %>

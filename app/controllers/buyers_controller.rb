@@ -28,14 +28,14 @@ class BuyersController < ApplicationController
 		if @buyer.nil?
 			render buyers_path
 		end
-    #@buyers = Buyer.where(params[:id])
-    #@buyer = Buyer.new(params[:id])
   end
 
 
 	def destroy
 		@buyer = Buyer.find(params[:id])
-		@buyer.destroy
+		if @buyer.destroy
+			redirect_to buyers_path
+		end
 	end
 
 	private

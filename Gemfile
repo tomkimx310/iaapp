@@ -42,8 +42,11 @@ end
 # Use simple_form for nicer form layouts
 gem 'simple_form'
 
-# User country select gem for international drop down
+# Use country select gem for international drop down
 gem 'country_select'
+
+# Use carmen-rails to select states, provinces, etc.
+gem 'carmen-rails' 
 
 
 # Use ActiveModel has_secure_password

@@ -31,6 +31,11 @@ GEM
       railties (>= 3.1.0)
       sass-rails (>= 3.1.0)
     builder (3.1.4)
+    carmen (1.0.0)
+      unicode_utils (~> 1.4.0)
+    carmen-rails (1.0.0)
+      carmen (~> 1.0.0.beta2)
+      rails
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -111,12 +116,14 @@ GEM
     uglifier (2.3.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unicode_utils (1.4.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bootstrap-sass-rails
+  carmen-rails
   coffee-rails (~> 4.0.0)
   country_select
   jbuilder (~> 1.2)

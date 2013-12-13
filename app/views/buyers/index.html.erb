@@ -1,9 +1,13 @@
 <h2>Buyer Browser</h2>
 
-<%= simple_form_for buyers_path, :method => :get do |f| %>
-  <%= f.input :search, :required => false, :placeholder => '"ex. Johnson"' %>
-  <%= f.button :submit, "Search" %>
-<% end %>
+<div id = "search-bar">
+	<%= simple_form_for buyers_path, :method => :get do |f| %>
+	  <%= f.input :search, label: false, required: false, placeholder: 'ex. Byrd', class: 'pull-right' %>
+	  <%= f.button :submit, "Search" %>
+	<% end %>
+</div>
+<br>
+<br>
 <br>
 <%= link_to "Add New", new_buyer_path, class: 'btn btn-primary' %>
 <br>
@@ -23,9 +27,10 @@
 	    <td><%= buyer.first_name %></td>
 	    <td><%= buyer.last_name %></td>
 	    <td><%= buyer.state %></td>
-	    <td><%= link_to "Show", buyer %></td>
-	    <td><%= link_to "Edit", edit_buyer_path(buyer) %></td>
-	    <td><%= link_to "Cancel", buyer, method: :delete, data: { confirm: "Are you sure?" } %></td>
+	    <td><%= link_to "Show", buyer, class: 'btn btn-primary btn-sm' %></td>
+	    <td><%= link_to "Update", edit_buyer_path(buyer), class: 'btn btn-primary btn-sm' %></td>
+	    <td><%= link_to "Cancel", buyer, method: :delete, class: 'btn btn-primary btn-sm', 
+	    				data: { confirm: "Are you sure?" } %></td>
 	  </tr>
 	<% end %>
 </table>

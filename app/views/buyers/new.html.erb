@@ -21,15 +21,13 @@
 		<br>
 		<%= f.input :country, priority: [ "United States" ] %>
 		<br>
-		<%= f.input :email %>
+		<%= f.input :email, as: :email %>
 		<br>
 		<%= f.input :phone1, as: :string %>
 		<br>
 		<%= f.input :phone2, as: :string %>
 		<br>
-		<%= f.input :fax %>
-		<br>
-		<%= f.input :ssn %>
+		<%= f.input :ssn, label: "SSN#" %>
 		<br>
 		<%= f.input :payment_type, collection: ["EFT", "Credit Card", "Coupon Book", "Statement", "PIF"] %>
 		<br>

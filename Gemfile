@@ -46,7 +46,7 @@ gem 'simple_form'
 gem 'country_select'
 
 # Use carmen-rails to select states, provinces, etc.
-gem 'carmen-rails' 
+# gem 'carmen-rails' 
 
 
 # Use ActiveModel has_secure_password

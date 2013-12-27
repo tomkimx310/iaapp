@@ -6,5 +6,9 @@
 <% end %>
 <br>
 <br>
+<ul><% @clients.each do |client| %>
+	<li><%= client.name %></li>
+	<% end %>
+</ul>
 <br>
 <%= link_to "Add New", new_client_path, class: 'btn btn-primary' %>

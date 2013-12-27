@@ -1,0 +1,42 @@
+<script>
+$('#datepicker').datepicker({format: 'yyyy-mm-dd'});
+</script>
+
+<h3>Enter a new Contract</h3>
+<br>
+<div class="new-contract-form">
+	<%= simple_form_for(@contract, html: {class: 'form-horizontal' }) do |f| %>
+		
+		<%= f.input :programprice, label: "Program Price", as: :string %>
+		<br>
+		<%= f.input :downpayment, label: "Down Payment", as: :string %>
+		<br>
+		<%= f.input :servicefee, label: "Service Fee", as: :string %>
+		<br>
+		<%= f.input :totalbalance, label: "Total Balance", as: :string %>
+		<br>
+		<%= f.input :numberofpayments, label: "# of Payments", as: :string %>
+		<br>
+		<%= f.input :perpaymentamount, label: "Per Payment Amount", as: :string %>
+		<br>
+		<%= f.input :firstpaymentdue, label: "1st Payment Due On:", as: :string, input_html: { class: "datepicker", value: Time.now.strftime('%m/%d/%Y') } %>
+		<br>
+		<%= f.input :programbegins, label: "Program Begin Date", as: :string, input_html: { class: "datepicker", value: Time.now.strftime('%m/%d/%Y') }  %>
+		<br>
+		<%= f.input :programends, label: "Program End Date", as: :string, input_html: { class: "datepicker", value: Time.now.strftime('%m/%d/%Y') }  %>
+		<br>
+		<%= f.input :programdescription, label: "Program Description", as: :string %>
+		<br>
+		<%= f.input :latefee, label: "Late Fee Amount", as: :string %>
+		<br>
+		<%= f.input :graceperiod, label: "Grace Period (Days)", as: :string %>
+		<br>
+		<%= f.input :paymentmethod, label: "Payment Method", collection: ["EFT", "Credit Card", "Coupon Book", "Statement", "PIF"], include_blank: false %>
+		<br>
+		<%= f.input :member1, label: "Member #1 Name" %>
+		<br>
+		<%= f.submit "Create", class: 'btn btn-primary' %>
+		<%= link_to "Cancel", root_path, class: 'btn btn-primary' %>
+	<% end %>
+	<br>
+</div>

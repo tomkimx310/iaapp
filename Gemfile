@@ -45,6 +45,9 @@ gem 'simple_form'
 # Use country select gem for international drop down
 gem 'country_select'
 
+# Use Boostrap Datepicker
+gem 'bootstrap-datepicker-rails'
+
 # Use carmen-rails to select states, provinces, etc.
 # gem 'carmen-rails' 
 

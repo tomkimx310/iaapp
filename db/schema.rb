@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131212225514) do
+ActiveRecord::Schema.define(version: 20131227004500) do
 
   create_table "buyers", force: true do |t|
     t.string   "first_name"
@@ -55,6 +55,32 @@ ActiveRecord::Schema.define(version: 20131212225514) do
     t.string   "password"
     t.string   "password_confirmation"
     t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contracts", force: true do |t|
+    t.integer  "programprice"
+    t.integer  "downpayment"
+    t.integer  "servicefee"
+    t.integer  "totalbalance"
+    t.integer  "numberofpayments"
+    t.integer  "perpaymentamount"
+    t.date     "firstpaymentdue"
+    t.date     "programbegins"
+    t.date     "programends"
+    t.string   "programdescription"
+    t.integer  "latefee"
+    t.integer  "graceperiod"
+    t.string   "paymentmethod"
+    t.string   "member1"
+    t.string   "member2"
+    t.string   "member3"
+    t.string   "member4"
+    t.string   "member5"
+    t.string   "member6"
+    t.string   "member7"
+    t.string   "member8"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
